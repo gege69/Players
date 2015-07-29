@@ -19,3 +19,9 @@ E:\George\Projetos\Radio\Player\Player\Player\obj\x86\Debug\Player.pdb
 E:\George\Projetos\Radio\Player\Player\Player\bin\Debug\Newtonsoft.Json.dll
 E:\George\Projetos\Radio\Player\Player\Player\bin\Debug\Newtonsoft.Json.xml
 E:\George\Projetos\Radio\Player\Player\Player\obj\x86\Debug\Player.csprojResolveAssemblyReference.cache
+E:\George\Projetos\Radio\Player\Player\Player\bin\Debug\CoreAudioApi.dll
+E:\George\Projetos\Radio\Player\Player\Player\bin\Debug\MixerNativeLibrary.dll
+E:\George\Projetos\Radio\Player\Player\Player\bin\Debug\WindowsMicrophoneMuteLibrary.dll
+E:\George\Projetos\Radio\Player\Player\Player\bin\Debug\CoreAudioApi.pdb
+E:\George\Projetos\Radio\Player\Player\Player\bin\Debug\MixerNativeLibrary.pdb
+E:\George\Projetos\Radio\Player\Player\Player\bin\Debug\WindowsMicrophoneMuteLibrary.pdb

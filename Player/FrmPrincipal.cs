@@ -178,34 +178,47 @@ namespace Player
             lblLocucao.Visible = true;
             // realiza o controle das musicas
             ControlaMusica(statusMusic);
+
+            WindowsMicrophoneMuteLibrary.WindowsMicMute micMute = new WindowsMicrophoneMuteLibrary.WindowsMicMute();
+            micMute.UnMuteMic();
         }
 
         private void timerLocucao_Tick(object sender, EventArgs e)
         {
-            string vlFinal = "00:01:00";
+            string vlFinal = "01:00";
+            
+            WindowsMicrophoneMuteLibrary.WindowsMicMute micMute = new WindowsMicrophoneMuteLibrary.WindowsMicMute();
 
             if (statusLocucao < 60)
             {
-                statusLocucao = statusLocucao + 1;
-
-                lblLocucao.Text = "Parar Locução " + TimeSpan.FromSeconds(statusLocucao) + " até " + vlFinal;
+                statusLocucao = statusLocucao + 1;                
+                lblLocucao.Text = "Parar Locução \n" + TimeSpan.FromSeconds(statusLocucao).ToString("mm\\:ss") + " até " + vlFinal;
             }
             else
             {
                 lblLocucao.Visible = false;
                 lblLocucao.Text = "";
+                //para a locução
                 timerLocucao.Stop();
                 statusLocucao = 0;
-                RetornaMusica(RetMusic);
+                micMute.UnMuteMic();
+                //retorna a música caso esteja tocando
+                RetornaMusica(RetMusic);                
             }
+
         }
 
         private void lblLocucao_Click(object sender, EventArgs e)
         {
+            WindowsMicrophoneMuteLibrary.WindowsMicMute micMute = new WindowsMicrophoneMuteLibrary.WindowsMicMute();
+
             lblLocucao.Visible = false;
             lblLocucao.Text = "";
+            //para a locução
             timerLocucao.Stop();
             statusLocucao = 0;
+            micMute.UnMuteMic();
+            //retorna a música caso esteja tocando
             RetornaMusica(RetMusic);
         }
 
